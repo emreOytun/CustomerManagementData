@@ -1,0 +1,11 @@
+com\emreoytun\customermanagementdata\dto\results\ErrorDataResult.class
+com\emreoytun\customermanagementdata\dto\results\DataResult.class
+com\emreoytun\customermanagementdata\App.class
+com\emreoytun\customermanagementdata\dto\results\ErrorResult.class
+com\emreoytun\customermanagementdata\dto\customer\requests\CustomerAddRequest.class
+com\emreoytun\customermanagementdata\dto\customer\requests\CustomerUpdateRequest.class
+com\emreoytun\customermanagementdata\dto\customer\responses\CustomerGetResponse.class
+com\emreoytun\customermanagementdata\dto\results\Result.class
+com\emreoytun\customermanagementdata\dto\IModelMapperService.class
+com\emreoytun\customermanagementdata\dto\ModelMapperService.class
+com\emreoytun\customermanagementdata\dto\post\request\PostAddRequest.class
