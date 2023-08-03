@@ -15,7 +15,18 @@ public class ModelMapperService implements IModelMapperService {
     public <Source, Target> Target map(Source sourceObj, Class<Target> targetClass, String... ignoreProperties) {
         try {
             Target targetObj = targetClass.newInstance();
-            BeanUtils.copyProperties(sourceObj, targetObj);
+            copyProperties(sourceObj, targetObj, ignoreProperties);
+            return targetObj;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    @Override
+    public <Source, Target> Target mapComposed(Source sourceObj, Class<Target> targetClass, String... ignoreProperties) {
+        try {
+            Target targetObj = targetClass.newInstance();
+            copyPropertiesComposed(sourceObj, targetObj, ignoreProperties);
             return targetObj;
         } catch (Exception e) {
             return null;
@@ -24,6 +35,11 @@ public class ModelMapperService implements IModelMapperService {
 
     @Override
     public <Source, Target> void copyProperties(Source sourceObj, Target targetObj, String... ignoreProperties) {
+        BeanUtils.copyProperties(sourceObj, targetObj, ignoreProperties);
+    }
+
+    @Override
+    public <Source, Target> void copyPropertiesComposed(Source sourceObj, Target targetObj, String... ignoreProperties) {
         BeanUtils.copyProperties(sourceObj, targetObj, ignoreProperties);
 
         Field[] fields = sourceObj.getClass().getDeclaredFields();
