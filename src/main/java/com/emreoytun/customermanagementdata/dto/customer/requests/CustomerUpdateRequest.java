@@ -7,9 +7,9 @@ import jakarta.validation.constraints.NotNull;
 
 import java.util.Objects;
 
-@Data
 @Getter
 @Setter
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class CustomerUpdateRequest {
@@ -36,4 +36,5 @@ public class CustomerUpdateRequest {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }

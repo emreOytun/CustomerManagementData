@@ -15,4 +15,5 @@ public class PostAddRequest {
     @NotNull
     @NotBlank
     private String post;
+    private String description;
 }

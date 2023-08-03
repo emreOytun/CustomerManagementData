@@ -16,7 +16,7 @@ public class CustomerAddRequest {
     @NotNull
     @NotBlank
     @Size(min = 5, max = 20)
-    private String userName;
+    private String username;
 
     @NotNull
     @NotBlank

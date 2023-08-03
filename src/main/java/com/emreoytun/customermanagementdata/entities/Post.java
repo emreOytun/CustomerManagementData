@@ -24,8 +24,8 @@ public class Post extends BaseEntity {
     @Column(name = "post", nullable = false)
     private String post;
 
-    @Column(name = "price", nullable = false)
-    private BigDecimal price;
+    @Column(name = "price")
+    private String description;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")

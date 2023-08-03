@@ -1,4 +1,4 @@
-package com.emreoytun.customermanagementdata.dto.customer.responses;
+package com.emreoytun.customermanagementdata.dto.customer;
 
 import lombok.*;
 
@@ -7,10 +7,10 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CustomerGetResponse {
+public class CustomerDto {
 
     private int id;
-    private String userName;
+    private String username;
     private String firstName;
     private String lastName;
 }
