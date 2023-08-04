@@ -10,7 +10,6 @@ public interface UserDao extends JpaRepository<User, Integer> {
 
     // SpEL
     @Query("SELECT u FROM User u where u.username = :#{#username}")
-    Optional<User> findByUsername(String username);
-
+    User findByUsername(String username);
     boolean existsByUsername(String username);
 }
