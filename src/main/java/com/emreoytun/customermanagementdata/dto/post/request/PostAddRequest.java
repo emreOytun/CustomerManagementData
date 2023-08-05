@@ -16,4 +16,5 @@ public class PostAddRequest {
     @NotBlank
     private String post;
     private String description;
+    private int customerID;
 }
