@@ -12,6 +12,7 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "\"user\"") // Manually escaping from the reserved SQL keywords.
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User extends BaseEntity {
 
     @Id

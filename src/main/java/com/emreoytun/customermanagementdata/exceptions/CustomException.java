@@ -3,16 +3,20 @@ package com.emreoytun.customermanagementdata.exceptions;
 import org.springframework.http.HttpStatus;
 
 // Custom exception for customer business operations.
-public class CustomerBusinessRulesException extends RuntimeException {
+public class CustomException extends RuntimeException {
 
     private HttpStatus httpStatus;
 
-    public CustomerBusinessRulesException(String message) {
+    public CustomException(String message) {
         super(message);
         httpStatus = HttpStatus.BAD_REQUEST;
     }
 
-    public CustomerBusinessRulesException(String message, HttpStatus httpStatus) {
+    public CustomException(HttpStatus httpStatus) {
+        this.httpStatus = httpStatus;
+    }
+
+    public CustomException(String message, HttpStatus httpStatus) {
         super(message);
         this.httpStatus = httpStatus;
     }

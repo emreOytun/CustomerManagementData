@@ -48,7 +48,7 @@ public class ModelMapperService implements IModelMapperService {
             && !isFieldIgnored(field, ignoreProperties)) {
                 field.setAccessible(true);
                 try {
-                    BeanUtils.copyProperties(field.get(sourceObj), targetObj);
+                    BeanUtils.copyProperties(field.get(sourceObj), targetObj, "id");
                 } catch (IllegalAccessException e) {
                 }
             }

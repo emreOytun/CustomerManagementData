@@ -14,16 +14,12 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Customer {
+public class Customer extends User {
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "user_id")
-    private User user;
 
     @Column(name = "first_name", nullable = false)
     private String firstName;
